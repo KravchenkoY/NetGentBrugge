@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="10">
-        <Image Source="BG.jpg"/>
         <ListView x:Name="ListViewPersonen" Background="Transparent">
             <ListView.Resources>
                 <Style TargetType="Border" x:Key="StackTest">
@@ -39,13 +38,15 @@
                     <Border Style="{StaticResource StackTest}">
                         <Grid Name="stacc" Height="100">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition MaxWidth="100"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
                             </Grid.ColumnDefinitions>
-                            <Image Height="100" Width="150" Source="{Binding CarImage}" Stretch="UniformToFill" />
-                            <TextBlock Style="{StaticResource TextTest}" Grid.Column="1" Text="{Binding Brand}"/>
-                            <TextBlock Style="{StaticResource TextTest}" Grid.Column="2" Text="{Binding Model}"/>
+                            <TextBlock Style="{StaticResource TextTest}" Grid.Column="1" Text="{Binding FirstName}"/>
+                            <TextBlock Style="{StaticResource TextTest}" Grid.Column="2" Text="{Binding LastName}"/>
+                            <TextBlock Style="{StaticResource TextTest}" Grid.Column="3" Text="{Binding Age}"/>
+                            <TextBlock Style="{StaticResource TextTest}" Grid.Column="4" Text="{Binding Address}"/>
                         </Grid>
                     </Border>
                 </DataTemplate>
